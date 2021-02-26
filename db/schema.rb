@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 2021_02_26_135636) do
 
   create_table "messages", force: :cascade do |t|
     t.text "data"
-    t.string "type"
     t.binary "file"
+    t.string "data_type"
     t.bigint "room_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

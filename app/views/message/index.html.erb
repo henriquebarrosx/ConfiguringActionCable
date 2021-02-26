@@ -1,2 +1,9 @@
-<h1>Message#index</h1>
-<p>Find me in app/views/message/index.html.erb</p>
+<h1>Lista de mensagens</h1>
+
+<div style="display: flex; flex-direction: column" class="messages-content" id="room-id" data-room-id="<%= @room_id %>">
+  <% @messages.each do |message| %>
+    <div style="margin: 16px 0">
+      <span>-> <%= message.data %></span>
+    </div>
+  <% end %>
+</div>

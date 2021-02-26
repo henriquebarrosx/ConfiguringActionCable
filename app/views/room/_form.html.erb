@@ -1,0 +1,15 @@
+<div>
+  <%= form_with model: room do |form| %>
+    <div>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+      <% room.errors.full_messages_for(:title).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>
